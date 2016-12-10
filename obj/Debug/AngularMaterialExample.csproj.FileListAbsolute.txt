@@ -1,0 +1,12 @@
+D:\Practice Examples\AngularMaterialExample\AngularMaterialExample\bin\AngularMaterialExample.dll.config
+D:\Practice Examples\AngularMaterialExample\AngularMaterialExample\bin\AngularMaterialExample.dll
+D:\Practice Examples\AngularMaterialExample\AngularMaterialExample\bin\AngularMaterialExample.pdb
+D:\Practice Examples\AngularMaterialExample\AngularMaterialExample\obj\Debug\AngularMaterialExample.csprojResolveAssemblyReference.cache
+D:\Practice Examples\AngularMaterialExample\AngularMaterialExample\obj\Debug\AngularMaterialExample.dll
+D:\Practice Examples\AngularMaterialExample\AngularMaterialExample\obj\Debug\AngularMaterialExample.pdb
+C:\Users\Sachin\Downloads\AngularMaterialExample\AngularMaterialExample\AngularMaterialExample\bin\AngularMaterialExample.dll.config
+C:\Users\Sachin\Downloads\AngularMaterialExample\AngularMaterialExample\AngularMaterialExample\bin\AngularMaterialExample.dll
+C:\Users\Sachin\Downloads\AngularMaterialExample\AngularMaterialExample\AngularMaterialExample\bin\AngularMaterialExample.pdb
+C:\Users\Sachin\Downloads\AngularMaterialExample\AngularMaterialExample\AngularMaterialExample\obj\Debug\AngularMaterialExample.csprojResolveAssemblyReference.cache
+C:\Users\Sachin\Downloads\AngularMaterialExample\AngularMaterialExample\AngularMaterialExample\obj\Debug\AngularMaterialExample.dll
+C:\Users\Sachin\Downloads\AngularMaterialExample\AngularMaterialExample\AngularMaterialExample\obj\Debug\AngularMaterialExample.pdb

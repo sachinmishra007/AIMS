@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AIMS Project Prequistes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, minimal-ui" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//code.jquery.com" />
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href="AIMS.CSS/angular-material.min.css" rel="stylesheet" />
+    <link href="AIMS.CSS/animate.min.css" rel="stylesheet" />
+    <link href="AIMS.CSS/appstyle.css" rel="stylesheet" />
+</head>
+<body ng-app="DocumentationApp" ng-controller="DocumentationController" ng-cloak>
+    <div id="WelcomeText">
+        <header class="site__header island">
+            <div class="wrap">
+                <span id="animationSandbox" style="display: block;"><h1 class="site__title mega"><center><br /><br /><br /><b></b>AIMS Project rerequisite</h1></center></span>
+                <span>
+                    <center><button class="butt js--triggerAnimation md-ink-ripple" ng-click="ClickOnLetsExploreButton()">Let's Explore</button></center>
+                </span>
+            </div>
+        </header>
+    </div>
+    <div id="HomeScreen">
+        <div ng-cloak>
+            <md-toolbar>
+                <h3 class="AimsTitleList">AIMS Project Prerequisite</h3>
+            </md-toolbar>
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Home">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-1">ABSA</h1>
+                            <p>
+                            <p>
+                                Barclays Africa Group Limited is 62.3% owned by Barclays Bank PLC and is listed on the JSE Limited. The group is one of Africa’s major financial services providers offering personal and business
+                                Banking, credit cards, corporate and investment banking, wealth and investment management, and Bancassurance.The group was formed through combining Absa Group Limited and Barclays’ African operations
+                            </p>
+                            <p>On 31 July 2013. Reflecting the enlarged group’s pan-African focus, the group's name changed from Absa Group Limited, to Barclays Africa Group Limited on 2 August 2013. Registered head offices are in South Africa and the group has majority stakes in banks in Botswana, Ghana, Kenya, Mauritius, Mozambique, Seychelles, South Africa, Tanzania (Barclays Bank Tanzania and National Bank of Commerce), Uganda and Zambia. The group has representative offices in Namibia and Nigeria, and Bancassurance operations in Botswana, Mozambique, South Africa and Zambia. Barclays Bank Kenya and Barclays Bank Botswana continue to be listed on their respective stock exchanges. Barclays Bank PLC has operations in Egypt and Zimbabwe, which are part of the African business and continue to be run by Barclays Africa Group’s management. Absa is a signatory of the South African Financial Sector Charter.</p>
+                            <center>
+                                <button class="butt js--triggerAnimation" ng-click="ClickOnHome()">&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                <button class="butt js--triggerAnimation" ng-click="showAdvanced($event)">&nbsp;&nbsp;&nbsp;&nbsp;Instructions&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                            </center>
+                            </p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="ABSA Documents & VDI Machine">
+                        <md-content class="md-padding mdContentClass">
+                            <h1 class="md-display-1">ABSA Documents & VDI Machine</h1>
+                            <p>
+                                <div layout="column" layout-padding>
+                                    <md-input-container style=" margin-top: -24px;">
+                                        <label>Search for your Documents</label>
+                                        <input type="text" ng-model="SearchInAbsaDocumentsAndVDIMachine" class="md-block" />
+                                    </md-input-container>
+                                    <md-list class="md-dense md-2-line" flex style="margin-top: -53px;">
+                                        <md-subheader class="md-no-sticky">No. of Documents Available : {{AbsadocumentsVDIMachine.length}}</md-subheader>
+                                        <md-list-item class="md-2-line contact-item" ng-repeat="absadoc in AbsadocumentsVDIMachine|filter:SearchInAbsaDocumentsAndVDIMachine">
+                                            <div class="md-list-item-text compact">
+                                                <div style=" float: left;">
+                                                    <h3>{{absadoc.title}}</h3>
+                            <p>{{absadoc.Description}}</p>
+        </div>
+        <div class="divClass" style=" float: right;">
+            <md-button ng-disabled="absadoc.DownloadUrl=='#'?true:false" class="md-raised md-primary md-ink-ripple" ng-click="NavigateToDownLoad(absadoc.DownloadUrl)">Download</md-button>
+            <md-button ng-disabled="absadoc.Websitelink=='#'?true:false" class=" md-raised md-primary md-ink-ripple" ng-click="NavigateToUrl(absadoc.Websitelink)">Visit Site</md-button>
+        </div>
+
+    </div>
+    <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+    </md-list>
+    </div>
+    </p>
+    </md-content>
+    </md-tab>
+    <md-tab label="AIMS Technical Documents">
+        <md-content class="md-padding">
+            <h1 class="md-display-1">AIMS Technical Documents</h1>
+            <p>
+                <div layout="column" flex>
+                    <md-input-container layout="column" style=" margin-top: -16px;" class="md-block">
+                        <label>Search for ABSA Visa Related Documents</label>
+                        <input type="tex" ng-model="SearchInAbsaTechnicalRelatedDocuments" />
+                    </md-input-container>
+                    <md-list class="md-dense md-2-line" flex style="margin-top: -53px;">
+                        <md-subheader class="md-no-sticky">No. of Documents Available : {{AbsaTechnicalDocuments.length}}</md-subheader>
+                        <md-list-item class="md-2-line contact-item" ng-repeat="absadoc in AbsaTechnicalDocuments|filter:SearchInAbsaTechnicalRelatedDocuments">
+                            <div class="md-list-item-text compact">
+                                <div style=" float: left;">
+                                    <h3>{{absadoc.title}}</h3>
+            <p>{{absadoc.Description}}</p>
+            </div>
+            <div class="divClass" style=" float: right;">
+                <md-button ng-disabled="absadoc.DownloadUrl=='#'?true:false" class="md-raised md-primary md-ink-ripple" ng-click="NavigateToDownLoad(absadoc.DownloadUrl)">Download</md-button>
+                <md-button ng-disabled="absadoc.Websitelink=='#'?true:false" class=" md-raised md-primary md-ink-ripple" ng-click="NavigateToUrl(absadoc.Websitelink)">Visit Site</md-button>
+            </div>
+            </div>
+            </md-list-item>
+            </md-list>
+            </div>
+
+
+            </p>
+        </md-content>
+    </md-tab>
+    <md-tab label="ABSA Visa Documents">
+        <md-content class="md-padding">
+            <h1 class="md-display-1">ABSA Visa Documents</h1>
+            <p>
+                <div layout="column" flex>
+                    <md-input-container layout="column" style=" margin-top: -16px;" class="md-block">
+                        <label>Search for ABSA Visa Related Documents</label>
+                        <input type="tex" ng-model="SearchInAbsaVisaRelatedDocuments" />
+                    </md-input-container>
+                    <md-list class="md-dense md-2-line" flex style="margin-top: -53px;">
+                        <md-subheader class="md-no-sticky">No. of Documents Available : {{AbsaVisaDocuments.length}}</md-subheader>
+                        <md-list-item class="md-2-line contact-item" ng-repeat="absadoc in AbsaVisaDocuments|filter:SearchInAbsaVisaRelatedDocuments">
+                            <div class="md-list-item-text compact">
+                                <div style=" float: left;">
+                                    <h3>{{absadoc.title}}</h3>
+                                    <p>{{absadoc.Description}}</p>
+                                </div>
+                            <div class="divClass" style=" float: right;">
+                                <md-button ng-disabled="absadoc.DownloadUrl=='#'?true:false" class="md-raised md-primary md-ink-ripple" ng-click="NavigateToDownLoad(absadoc.DownloadUrl)">Download</md-button>
+                                <md-button ng-disabled="absadoc.Websitelink=='#'?true:false" class=" md-raised md-primary md-ink-ripple" ng-click="NavigateToUrl(absadoc.Websitelink)">Visit Site</md-button>
+                            </div>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </p>
+        </md-content>
+    </md-tab>
+    </md-tabs>
+    </md-content>
+    </div>
+    </div>
+</body>
+<script src="AIMS.AngularMaterialFiles/jquery-1.10.2.min.js"></script>
+<script src="AIMS.AngularMaterialFiles/angular.min.js"></script>
+<script src="AIMS.AngularMaterialFiles/angular-animate.min.js"></script>
+<script src="AIMS.AngularMaterialFiles/angular-aria.min.js"></script>
+<script src="AIMS.AngularMaterialFiles/angular-messages.min.js"></script>
+<script src="AIMS.AngularMaterialFiles/angular-material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="AIMS.AngularMaterialFiles/scripts/app.js"></script>
+<script src="AIMS.AngularMaterialFiles/scripts/services/AIMSProjectServices.js"></script>
+<script src="AIMS.AngularMaterialFiles/scripts/controllers/AIMSProjectControllers.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#HomeScreen').hide();
+        function WelcomeScreenAnimation(x) {
+            $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass();
+            });
+        }
+        WelcomeScreenAnimation('bounceInDown');
+    });
+</script>
+</html>

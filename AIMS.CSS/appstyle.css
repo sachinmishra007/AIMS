@@ -1,0 +1,68 @@
+﻿.wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.site__title {
+    color: #7c12cc;
+    background-image: -webkit-linear-gradient(92deg,#7c12cc,#0d0c29);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+h1, .alpha {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+.butt {
+    width: 146px;
+    border: 2px solid #7c12cc;
+    line-height: 1.375;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 700;
+    color: #7c12cc;
+    cursor: pointer;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+.butt, .input {
+    padding: .75rem;
+    margin: .375rem;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.AimsTitleProject {
+    height: 62px;
+}
+
+.AimsTitleList {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 0.5;
+    letter-spacing: -.05em;
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 480px) {
+    .divClass {
+        float: left !important;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .mdContentClass {
+        height: 500px;
+        overflow: auto;
+    }
+}
