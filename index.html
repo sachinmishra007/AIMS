@@ -31,13 +31,16 @@
                 <md-tabs md-dynamic-height md-border-bottom>
                     <md-tab label="Home">
                         <md-content class="md-padding">
-                            <h1 class="md-display-1">ABSA</h1>
-                            <p>
-                            <p>
+                            <h1 class="md-display-1" style=" margin-top: -4px;">ABSA</h1>
+                            <center>
+                                <img id="ABSAImageLogo" style="width: 250px;    height: 166px;    margin-top: -31px;" alt="ABSA (Amalgamated Banks of South Africa)"
+                                     src="AIMS.Image/images.png">
+                            </center>
+                            <p style="    margin-top: -13px;    text-align: justify;">
                                 Barclays Africa Group Limited is 62.3% owned by Barclays Bank PLC and is listed on the JSE Limited. The group is one of Africa’s major financial services providers offering personal and business
                                 Banking, credit cards, corporate and investment banking, wealth and investment management, and Bancassurance.The group was formed through combining Absa Group Limited and Barclays’ African operations
                             </p>
-                            <p>On 31 July 2013. Reflecting the enlarged group’s pan-African focus, the group's name changed from Absa Group Limited, to Barclays Africa Group Limited on 2 August 2013. Registered head offices are in South Africa and the group has majority stakes in banks in Botswana, Ghana, Kenya, Mauritius, Mozambique, Seychelles, South Africa, Tanzania (Barclays Bank Tanzania and National Bank of Commerce), Uganda and Zambia. The group has representative offices in Namibia and Nigeria, and Bancassurance operations in Botswana, Mozambique, South Africa and Zambia. Barclays Bank Kenya and Barclays Bank Botswana continue to be listed on their respective stock exchanges. Barclays Bank PLC has operations in Egypt and Zimbabwe, which are part of the African business and continue to be run by Barclays Africa Group’s management. Absa is a signatory of the South African Financial Sector Charter.</p>
+                            <p style="    margin-top: -13px;text-align: justify;">On 31 July 2013. Reflecting the enlarged group’s pan-African focus, the group's name changed from Absa Group Limited, to Barclays Africa Group Limited on 2 August 2013. Registered head offices are in South Africa and the group has majority stakes in banks in Botswana, Ghana, Kenya, Mauritius, Mozambique, Seychelles, South Africa, Tanzania (Barclays Bank Tanzania and National Bank of Commerce), Uganda and Zambia. The group has representative offices in Namibia and Nigeria, and Bancassurance operations in Botswana, Mozambique, South Africa and Zambia. Barclays Bank Kenya and Barclays Bank Botswana continue to be listed on their respective stock exchanges. Barclays Bank PLC has operations in Egypt and Zimbabwe, which are part of the African business and continue to be run by Barclays Africa Group’s management. Absa is a signatory of the South African Financial Sector Charter.</p>
                             <center>
                                 <button class="butt js--triggerAnimation" ng-click="ClickOnHome()">&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                 <button class="butt js--triggerAnimation" ng-click="showAdvanced($event)">&nbsp;&nbsp;&nbsp;&nbsp;Instructions&nbsp;&nbsp;&nbsp;&nbsp;</button>
@@ -47,7 +50,7 @@
                     </md-tab>
                     <md-tab label="ABSA Documents & VDI Machine">
                         <md-content class="md-padding mdContentClass">
-                            <h1 class="md-display-1">ABSA Documents & VDI Machine</h1>
+                            <h1 class="md-display-1"  style=" margin-top: -4px;">ABSA Documents & VDI Machine</h1>
                             <p>
                                 <div layout="column" layout-padding>
                                     <md-input-container style=" margin-top: -24px;">
@@ -77,7 +80,7 @@
     </md-tab>
     <md-tab label="AIMS Technical Documents">
         <md-content class="md-padding">
-            <h1 class="md-display-1">AIMS Technical Documents</h1>
+            <h1 class="md-display-1"  style=" margin-top: -4px;">AIMS Technical Documents</h1>
             <p>
                 <div layout="column" flex>
                     <md-input-container layout="column" style=" margin-top: -16px;" class="md-block">
@@ -120,16 +123,16 @@
                             <div class="md-list-item-text compact">
                                 <div style=" float: left;">
                                     <h3>{{absadoc.title}}</h3>
-                                    <p>{{absadoc.Description}}</p>
-                                </div>
-                            <div class="divClass" style=" float: right;">
-                                <md-button ng-disabled="absadoc.DownloadUrl=='#'?true:false" class="md-raised md-primary md-ink-ripple" ng-click="NavigateToDownLoad(absadoc.DownloadUrl)">Download</md-button>
-                                <md-button ng-disabled="absadoc.Websitelink=='#'?true:false" class=" md-raised md-primary md-ink-ripple" ng-click="NavigateToUrl(absadoc.Websitelink)">Visit Site</md-button>
-                            </div>
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                </div>
+            <p>{{absadoc.Description}}</p>
+            </div>
+            <div class="divClass" style=" float: right;">
+                <md-button ng-disabled="absadoc.DownloadUrl=='#'?true:false" class="md-raised md-primary md-ink-ripple" ng-click="NavigateToDownLoad(absadoc.DownloadUrl)">Download</md-button>
+                <md-button ng-disabled="absadoc.Websitelink=='#'?true:false" class=" md-raised md-primary md-ink-ripple" ng-click="NavigateToUrl(absadoc.Websitelink)">Visit Site</md-button>
+            </div>
+            </div>
+            </md-list-item>
+            </md-list>
+            </div>
             </p>
         </md-content>
     </md-tab>
@@ -156,7 +159,14 @@
                 $(this).removeClass();
             });
         }
+        //ABSAImageLogo
+        function ABSAImageLogo(x) {
+            $('#ABSAImageLogo').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass();
+            });
+        }
         WelcomeScreenAnimation('bounceInDown');
+        
     });
 </script>
 </html>

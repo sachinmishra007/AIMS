@@ -46,6 +46,12 @@ angular.module("AIMS.Controllers", [])
     $scope.ClickOnLetsExploreButton = function () {
         $('#WelcomeText').hide();
         $('#HomeScreen').show();
+        function ABSAImageLogo(x) {
+            $('#ABSAImageLogo').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass();
+            });
+        }
+        ABSAImageLogo('flip');
     };
     $scope.ClickOnHome = function () {
         $('#WelcomeText').show();
